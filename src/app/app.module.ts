@@ -16,9 +16,8 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       { path: '', pathMatch: 'full', redirectTo: 'home' },
       { path: 'home', component: HomeComponent },
-    ]),
-    StoreModule.forRoot({}, {}),
-    
+      { path: 'event', loadChildren: () => import('./event/event.module').then(m => m.EventModule) }
+    ])    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/containers/home/home.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -27,4 +28,12 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('The App');
   }));
+
+});
+
+describe('component: home', () => {
+  it('have a title of "The title"', () => {
+    const component = new HomeComponent();
+    expect(component.title).toEqual('The title');
+  });
 });
