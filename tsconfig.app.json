@@ -11,5 +11,11 @@
   ],
   "include": [
     "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts",
+    "wallabyTest.ts",
+    "cypress"
   ]
 }

@@ -8,6 +8,6 @@ import { Attendee } from 'src/app/models';
 })
 export class EventListComponent{
   @Input()
-  attendees: Attendee[] | null = [];
+  attendees: Attendee[];
 
 }

@@ -21,7 +21,6 @@ export class AddAttendeeComponent {
 
   submit() {
     const attendee = {
-      id: 0,
       name: this.addAttendeeForm.value.name,
       attending: true,
       guests: 0

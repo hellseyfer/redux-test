@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Attendee } from '../../models';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -27,4 +27,6 @@ export class EventService {
   addAttendee(attendee: Attendee): Observable<Attendee> {
     return this.httpClient.post<Attendee>('/api/attendees', attendee);
   }
+
+  
 }

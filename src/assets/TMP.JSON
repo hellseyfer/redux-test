@@ -1,0 +1,96 @@
+{
+  "stations": [
+    {
+      "name": "EFO 2 BAJA (GP)",
+      "refPressure": 20,
+      "capacity": { "gas": 2000, "oil": 2000, "water": 2000 },
+      "production": { "gas": 1358.155419, "oil": 181.486, "water": 156.888 }
+    },
+    {
+      "name": "EFO 4 MEDIA (GP)",
+      "refPressure": 30,
+      "capacity": { "gas": 3000, "oil": 3000, "water": 3000 },
+      "production": { "gas": 190.775291, "oil": 12.207, "water": 26.028 }
+    },
+    {
+      "name": "EFO INACTIVOS",
+      "refPressure": 40,
+      "capacity": { "gas": 4000, "oil": 4000, "water": 4000 },
+      "production": { "gas": 0, "oil": 0, "water": 0 }
+    }
+  ],
+  "wells": [
+    {
+      "name": "EFO-263(d)",
+      "stationName": "EFO 2 BAJA (GP)",
+      "prosperParameters": {
+        "fluidType": 2,
+        "tubingCorrelation": 14,
+        "filePath": "\\\\ydtzdstadir001.file.core.windows.net\\digitalreservoir\\Prosper\\Estacion Fernandez Oro\\Vigente\\EFO-263.Out"
+      },
+      "parameters": {
+        "rates": { "gas": 8490, "water": 0.12, "oil": 0.79 },
+        "ratios": {
+          "gasOilRate": 10746.84,
+          "waterGasRate": 14.13,
+          "condensateGasRate": 0.00009305060836487749
+        },
+        "choke": 4,
+        "pressureWellHead": 3,
+        "linePress": 5.98,
+        "temperature": 15,
+        "pwsInicial": 600,
+        "flow": "S",
+        "stability": "Q<Critico"
+      }
+    },
+    {
+      "name": "EFO-254(d)",
+      "stationName": "EFO 2 BAJA (GP)",
+      "prosperParameters": {
+        "fluidType": 2,
+        "tubingCorrelation": 12,
+        "filePath": "\\\\ydtzdstadir001.file.core.windows.net\\digitalreservoir\\Prosper\\Estacion Fernandez Oro\\Vigente\\EFO-254.Out"
+      },
+      "parameters": {
+        "rates": { "gas": 6570, "water": 0.2, "oil": 1 },
+        "ratios": {
+          "gasOilRate": 5000,
+          "waterGasRate": 0,
+          "condensateGasRate": 0.0002
+        },
+        "choke": 25.4,
+        "pressureWellHead": 5.4,
+        "linePress": 5.16,
+        "temperature": 15,
+        "pwsInicial": 500,
+        "flow": "S",
+        "stability": "Q<Critico"
+      }
+    },
+    {
+      "name": "EFO-253(d)",
+      "stationName": "EFO 2 BAJA (GP)",
+      "prosperParameters": {
+        "fluidType": 2,
+        "tubingCorrelation": 12,
+        "filePath": "\\\\ydtzdstadir001.file.core.windows.net\\digitalreservoir\\Prosper\\Estacion Fernandez Oro\\Vigente\\EFO-253.Out"
+      },
+      "parameters": {
+        "rates": { "gas": 5550, "water": 0.12, "oil": 2 },
+        "ratios": {
+          "gasOilRate": 3000,
+          "waterGasRate": 0,
+          "condensateGasRate": 0.0003333333333333333
+        },
+        "choke": 6,
+        "pressureWellHead": 6.02,
+        "linePress": 5.19,
+        "temperature": 15,
+        "pwsInicial": 600,
+        "flow": "S",
+        "stability": "Q<Critico"
+      }
+    }
+  ]
+}
