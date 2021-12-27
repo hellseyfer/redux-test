@@ -3,8 +3,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { EventComponent } from './event.component';
 import { EventService } from '../../services/event.service';
-import { of } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { RouterTestingModule } from '@angular/router/testing';
+import { State } from '../../state';
+import { Attendee } from 'src/app/models';
 
 //import { NO_ERRORS_SCHEMA } from '@angular/compiler/src/core';
 
@@ -12,9 +15,11 @@ describe('EventComponent', () => {
   let component: EventComponent;
   let fixture: ComponentFixture<EventComponent>;
   let service: EventService;
-
+  let store: Store<State>;
+  
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       providers: [
         { provide: HttpClient, useValue: null },
         {
@@ -26,7 +31,8 @@ describe('EventComponent', () => {
         {
           provide: Store,
           useValue: {
-            pipe: () => {}
+            pipe: () => {},
+            dispatch: () => jest.fn()
           }
         }
       ],
@@ -39,6 +45,7 @@ describe('EventComponent', () => {
     fixture = TestBed.createComponent(EventComponent);
     component = fixture.componentInstance;
     service = TestBed.get(EventService);
+    store = TestBed.get(Store);
     fixture.detectChanges();
   });
 
@@ -47,11 +54,14 @@ describe('EventComponent', () => {
   });
 
   it('should have a list of attendees set', () => {
+
+    const subject = new BehaviorSubject<Attendee[]>(null);
+
     const fakeAttendees = [{ name: 'FAKE_NAME', attending: false, guests: 0 }];
 
-    jest
-      .spyOn(service, 'getAttendees')
-      .mockImplementation(() => of(fakeAttendees));
+    jest.spyOn(store, 'pipe').mockImplementation(() => subject);
+
+    subject.next(fakeAttendees);
 
     component.ngOnInit();
 
