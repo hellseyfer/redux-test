@@ -31,8 +31,6 @@ export class EventComponent implements OnInit {
   navigate(e) {
     const filterBy = e.target.value;
     this.router.navigateByUrl(`/event?filterBy=${filterBy}`);
-    this.attendees$ = this.store.pipe(select(getFilteredAttendees));
-
   }
 
 }
