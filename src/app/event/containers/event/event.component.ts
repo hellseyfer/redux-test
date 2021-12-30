@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Attendee } from 'src/app/models';
 import { EventService } from '../../services/event.service';
 import { AddAttendee, LoadAttendees } from '../../state/attendees/attendees.actions';
-import { getAttendees, getFilteredAttendees } from '../../state/attendees/attendee.selectors';
+import { getFilteredAttendees } from '../../state/attendees/attendee.selectors';
 import { EventState } from '../../state';
 import { Router } from '@angular/router';
 
