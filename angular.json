@@ -89,5 +89,8 @@
       }
     }
   },
-  "defaultProject": "redux-test"
+  "defaultProject": "redux-test",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

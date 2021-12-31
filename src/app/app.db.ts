@@ -1,16 +1,11 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Attendee } from './models';
+import { Product } from './features/products/models';
+import data from 'src/assets/products.json';
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const attendees = [
-      {
-        id: 1,
-        name: 'Duncan In Memory',
-        attending: true,
-        guests: 0
-      }
-    ] as Attendee[];
-    return { attendees };
+    const products = data.data as  Product[];
+    console.log(products);
+    return { products };
   }
 }

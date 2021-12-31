@@ -24,7 +24,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     RouterModule.forRoot([
       { path: '', pathMatch: 'full', redirectTo: 'home' },
       { path: 'home', component: HomeComponent },
-      { path: 'event', loadChildren: () => import('./event/event.module').then(m => m.EventModule) }
+      { path: 'products', loadChildren: () => import('./features/products/products.module').then(m => m.ProductsModule) }
     ]),
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
